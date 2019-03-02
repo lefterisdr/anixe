@@ -1,6 +1,9 @@
 package io.anixe.assignment.model.dto;
 
-import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import io.anixe.assignment.model.types.CurrencyType;
 
 import javax.validation.constraints.NotNull;
