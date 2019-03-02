@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+<log4j:configuration debug="true" xmlns:log4j='http://jakarta.apache.org/log4j/'>
+    <appender name="file-daily" class="org.apache.log4j.rolling.RollingFileAppender">
+        <rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
+            <param name="ActiveFileName" value="logs/app.log"/>
+            <param name="FileNamePattern" value="logs/app.%d{yyyy-MM-dd}.log.gz"/>
+        </rollingPolicy>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{HH:mm:ss,SSS} %-5p - %m%n"/>
+        </layout>
+    </appender>
+    <logger name="io.anixe.assignment">
+        <level value="DEBUG" />
+        <appender-ref ref="file-daily" />
+    </logger>
+</log4j:configuration>
