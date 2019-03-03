@@ -2,11 +2,13 @@
 
 [![Build Status](https://travis-ci.org/lefterisdr/anixe.svg?branch=master)](https://travis-ci.org/lefterisdr/anixe/)
 
+
 ## Project creation
 In order to get the project from [Github](http://www.github.com), run the following:
 ```
 git clone https://github.com/lefterisdr/anixe.git
 ```
+
 
 ## Database installation
 The project supports MySQL as a full-blown database. In order to use the project with MySQL:
@@ -16,8 +18,10 @@ The project supports MySQL as a full-blown database. In order to use the project
 src/main/resources/db/create_and_populate.sql
 ```
 
-## Swagger
-The REST APIs are documented at http://localhost:8082/swagger-ui.html
+
+## Environment
+The project requires Java 1.8+ and Maven 3
+
 
 ## Tests
 The tests are executed against an instance of H2 in-memory database. In order to execute the tests, go to the root folder of the Java project and execute the following:
@@ -34,6 +38,7 @@ mvn clean install
 ```
 > The JAR will be generated in folder "target"
 
+
 ## Running
 In order to run the project you need three things:
 - the produced JAR file
@@ -44,6 +49,13 @@ Once those are in place, run the application as follows:
 ```
 java -jar assignment-1.0.jar
 ```
+> Make sure to update application.properties with the specific information of the local MySQL instance 
+> and adjust accordingly the log levels in both application.properties and log4j.xml
+
+
+## Documentation (Swagger)
+The REST APIs are documented at http://localhost:8082/swagger-ui.html
+
 
 ## Graceful shutdown
 In order to terminate the application gracefully execute:
